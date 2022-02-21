@@ -1,0 +1,133 @@
+// CONTACT
+
+section.contact {
+  background-image: url("./images/contact-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  display: flex;
+
+  & > div {
+    padding: 0 120px;
+
+    .section__heading {
+      margin-bottom: 0;
+    }
+  }
+  span {
+    color: #fff;
+  }
+
+  button {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  section.contact {
+    & > div {
+      padding: 0 60px;
+      button {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .section__heading {
+      margin-bottom: 40px !important;
+    }
+  }
+}
+
+// CONTACT END
+
+// FOOTER
+
+footer {
+  .footer__banner {
+    background-color: $color-primary;
+
+    padding: 60px 120px 20px 60px;
+    justify-content: space-between;
+    .company {
+      .company__details {
+        margin-bottom: 40px;
+        .logo {
+          font-size: 28px;
+          line-height: 28px;
+          color: #ffffff;
+          margin-right: 18px;
+        }
+        .tagline {
+          font-size: 12px;
+          line-height: 12px;
+          letter-spacing: 0.02em;
+          color: #ffffff;
+        }
+      }
+
+      .company__address {
+        margin-bottom: 40px;
+        div {
+          font-size: 12px;
+          line-height: 24px;
+          letter-spacing: 0.1em;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .about,
+    .business-information,
+    .others {
+      margin-bottom: 40px;
+      ul li:not(.list-heading) {
+        margin-left: 20px;
+        font-size: 12px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      ul li.list-heading {
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .footer {
+    margin: 20px 60px;
+
+    .copyright {
+      font-size: 12px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: relative;
+        font-size: 7px;
+        border-right: 1px solid rgba(0, 0, 0, 0.5);
+        margin: 0 20px;
+      }
+    }
+
+    .tagline {
+      font-size: 12px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// FOOTER END
