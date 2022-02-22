@@ -954,8 +954,11 @@ footer .footer .tagline {
 }
 
 section.service {
-  padding: 0 30px;
-  margin-top: 150px;
+  padding-top: 150px;
+  background-image: url("./images/hero-image-2.png");
+  background-repeat: no-repeat;
+  background-position: 120% -145px;
+  background-size: inherit;
 }
 
 section.service > div {
@@ -981,6 +984,19 @@ section.service .links button:first-child {
 
 section.service .links button:first-child svg path {
   stroke: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  section.service > div {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  section.service {
+    background-position: 100% -20px;
+    background-size: contain;
+  }
 }
 
 section.civil-works {

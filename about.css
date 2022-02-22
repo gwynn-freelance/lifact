@@ -955,13 +955,17 @@ footer .footer .tagline {
 
 section.about {
   margin-bottom: 100px;
+  background-image: url("./images/hero-image-2.png");
+  background-repeat: no-repeat;
+  background-position: 170% -240px;
+  background-size: contain;
+  padding-top: 150px;
 }
 
 section.about > div:first-child {
   max-width: 960px;
   width: 100%;
-  margin: 150px auto 120px;
-  padding: 0 30px;
+  margin: 0 auto 120px;
 }
 
 section.about .section__sub-heading div {
@@ -1000,7 +1004,16 @@ section.about .statement-wrapper > div:last-child {
   padding-top: 60px;
 }
 
+@media screen and (max-width: 1024px) {
+  section.about > div:first-child {
+    padding-left: 30px;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  section.about {
+    background-position: 150% -20px;
+  }
   section.about .statement-wrapper > div:first-child {
     padding-right: 0;
   }
@@ -1063,6 +1076,9 @@ section.work-style .work-style__list .work-style__image img {
 
 section.message {
   padding: 120px 30px;
+  background-image: url("./images/bg-image-3.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 section.message > div {

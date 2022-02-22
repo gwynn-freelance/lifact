@@ -3,12 +3,16 @@
 
 section.about {
   margin-bottom: 100px;
+  background-image: url("./images/hero-image-2.png");
+  background-repeat: no-repeat;
+  background-position: 170% -240px;
+  background-size: contain;
+  padding-top: 150px;
 
   & > div:first-child {
     max-width: 960px;
     width: 100%;
-    margin: 150px auto 120px;
-    padding: 0 30px;
+    margin: 0 auto 120px;
   }
   .section__sub-heading div {
     font-size: 34px;
@@ -49,8 +53,18 @@ section.about {
   }
 }
 
+@media screen and (max-width: $breakpoint-lg) {
+  section.about {
+    & > div:first-child {
+      padding-left: 30px;
+    }
+  }
+}
+
 @media screen and (max-width: $breakpoint-sm) {
   section.about {
+    background-position: 150% -20px;
+
     .statement-wrapper {
       & > div:first-child {
         padding-right: 0;
@@ -116,6 +130,9 @@ section.work-style {
 
 section.message {
   padding: 120px 30px;
+  background-image: url("./images/bg-image-3.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
 
   & > div {
     max-width: 960px;
