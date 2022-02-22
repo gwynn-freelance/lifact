@@ -1286,11 +1286,16 @@ section.service div.card-list .card {
 
 section.works {
   padding: 0 30px;
+  margin-top: 30px;
+  background-image: url("./images/bg-image-2.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
 }
 
 section.works > div {
   max-width: 960px;
-  padding: 120px 0;
+  padding: 90px 0 120px;
 }
 
 section.works > div .card-list {
@@ -1317,6 +1322,7 @@ section.works > div .card-list .card .card__image-container {
           align-items: center;
   font-size: 28px;
   margin-bottom: 20px;
+  background-color: #fff;
 }
 
 section.works > div .card-list .card .card__content-description {
@@ -1327,8 +1333,9 @@ section.works > div .card-list .card .card__content-description {
 
 @media screen and (max-width: 600px) {
   section.works {
-    margin: 20px;
-    padding: 40px 0;
+    padding: 40px 30px;
+    background-size: auto;
+    background-position: right top;
   }
 }
 /*# sourceMappingURL=style.css.map */

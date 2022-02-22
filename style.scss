@@ -374,9 +374,15 @@ section.service {
 
 section.works {
   padding: 0 30px;
+  margin-top: 30px;
+  background-image: url("./images/bg-image-2.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+
   & > div {
     max-width: 960px;
-    padding: 120px 0;
+    padding: 90px 0 120px;
 
     .card-list {
       gap: 21px;
@@ -394,6 +400,7 @@ section.works {
           align-items: center;
           font-size: 28px;
           margin-bottom: 20px;
+          background-color: #fff;
         }
 
         .card__content-description {
@@ -408,8 +415,9 @@ section.works {
 
 @media screen and (max-width: $breakpoint-sm) {
   section.works {
-    margin: 20px;
-    padding: 40px 0;
+    padding: 40px 30px;
+    background-size: auto;
+    background-position: right top;
   }
 }
 
