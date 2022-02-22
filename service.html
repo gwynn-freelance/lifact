@@ -10,33 +10,16 @@
 </head>
 
 <body>
-  <div class="navigation flex align-center">
-    <div class="logo">
-      <span class="logo__icon overpass">Lifact</span>
-      <span class="logo__description">関西の土木建築工事｜株式会社Lifact</span>
-    </div>
+  <div class="navigation ">
+    <div class="flex align-center justify-between">
+      <div class="logo">
+        <span class="logo__icon overpass">Lifact</span>
+        <span class="logo__description desktop-only ">関西の土木建築工事｜株式会社Lifact</span>
+      </div>
 
 
-    <nav class="desktop-nav desktop-only ">
-      <ul class="flex">
-        <li>
-          <a href="#">私たちについて</a>
-        </li>
-        <li>
-          <a href="#">事業案内</a>
-        </li>
-        <li>
-          <a href="#">リファクトのしごと</a>
-        </li>
-        <li>
-          <a href="#">お問い合わせ</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="mobile-nav mobile-only">
-      <div></div>
-      <nav>
-        <ul>
+      <nav class="desktop-nav desktop-only ">
+        <ul class="flex">
           <li>
             <a href="#">私たちについて</a>
           </li>
@@ -50,12 +33,40 @@
             <a href="#">お問い合わせ</a>
           </li>
         </ul>
-
-        <p>
-          <a href="#">プライバシーポリシー </a>
-          <small>&copy; 2022 Lifact 関西の土木建築工事｜株式会社Lifact</small>
-        </p>
       </nav>
+      <div class="mobile-nav mobile-only">
+        <div class="nav-icon" onclick="triggerMenu()">
+          <svg class="nav-icon-close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+          </svg>
+
+          <svg class="nav-icon-open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+          </svg>
+        </div>
+        <nav id="mobile-nav">
+          <ul>
+            <li>
+              <a href="#">私たちについて</a>
+            </li>
+            <li>
+              <a href="#">事業案内</a>
+            </li>
+            <li>
+              <a href="#">リファクトのしごと</a>
+            </li>
+            <li>
+              <a href="#">お問い合わせ</a>
+            </li>
+          </ul>
+
+          <p>
+            <a href="#">プライバシーポリシー </a>
+          </p>
+          <small>&copy; 2022 Lifact 関西の土木建築工事</small>
+
+        </nav>
+      </div>
     </div>
   </div>
 
@@ -384,6 +395,14 @@
       </span>
     </div>
   </footer>
+
+
+  <script>
+    function triggerMenu() {
+      let body = document.body;
+      body.classList.toggle("open");
+    }
+  </script>
 </body>
 
 </html>

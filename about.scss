@@ -7,7 +7,8 @@ section.about {
   & > div:first-child {
     max-width: 960px;
     width: 100%;
-    margin: 80px auto 120px;
+    margin: 150px auto 120px;
+    padding: 0 30px;
   }
   .section__sub-heading div {
     font-size: 34px;
@@ -41,7 +42,7 @@ section.about {
     }
 
     & > div:last-child {
-      padding-left: 50px;
+      padding-left: 30px;
       padding-right: 120px;
       padding-top: 60px;
     }
@@ -59,7 +60,8 @@ section.about {
 }
 
 section.work-style {
-  padding: 120px 0;
+  padding: 120px 30px;
+  width: 100%;
   background-color: #faf6f5;
 
   & > div {
@@ -94,12 +96,13 @@ section.work-style {
   }
 }
 
-@media screen and (max-width: $breakpoint-sm) {
+@media screen and (max-width: 981px) {
   section.work-style {
-    padding-left: 50px;
-    padding-right: 50px;
-
     .work-style__list {
+      div[class^="work-style-"] {
+        justify-content: center;
+      }
+
       .work-style__content {
         order: 1;
       }
@@ -112,7 +115,7 @@ section.work-style {
 }
 
 section.message {
-  padding: 120px 0;
+  padding: 120px 30px;
 
   & > div {
     max-width: 960px;
@@ -124,21 +127,23 @@ section.message {
   }
 }
 
-@media screen and (max-width: $breakpoint-sm) {
+@media screen and (max-width: 981px) {
   section.message {
-    padding: 120px 0;
+    padding: 120px 30px;
 
     & > div {
-      padding-left: 50px;
-      padding-right: 50px;
       flex-direction: column;
+
+      & > div {
+        margin: auto;
+      }
     }
   }
 }
 
 section.company {
   background-color: #faf6f5;
-  padding: 120px 0;
+  padding: 120px 30px;
 
   & > div {
     max-width: 960px;
@@ -183,15 +188,6 @@ section.company {
       td:last-child {
         width: 77%;
       }
-    }
-  }
-}
-
-@media screen and (max-width: $breakpoint-sm) {
-  section.company {
-    & > div {
-      padding-left: 50px;
-      padding-right: 50px;
     }
   }
 }

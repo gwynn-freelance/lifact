@@ -1,3 +1,141 @@
+//  NAVIGATION
+div.navigation {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 106px;
+  padding: 0 40px;
+  position: fixed;
+  z-index: 1000;
+
+  & > div {
+    height: 106px;
+  }
+
+  .logo {
+    height: fit-content;
+    .logo__icon {
+      position: relative;
+      font-size: 28px;
+      line-height: 28px;
+      z-index: 1000;
+    }
+    .logo__description {
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  nav.desktop-nav {
+    height: fit-content;
+    li a {
+      font-size: 12px;
+      line-height: 13px;
+      letter-spacing: 0.05em;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+    }
+
+    li:last-child {
+      padding: 16px 30px;
+      background-color: $color-primary;
+      border-radius: 30px;
+      a {
+        color: #fff;
+        margin: 0;
+      }
+    }
+  }
+
+  div.mobile-nav {
+    .nav-icon {
+      background-color: $color-primary;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      z-index: 1000;
+      position: fixed;
+      top: 35px;
+      right: 20px;
+      cursor: pointer;
+
+      svg {
+        fill: #fff;
+      }
+
+      svg.nav-icon-close {
+        display: block;
+      }
+      svg.nav-icon-open {
+        display: none;
+      }
+    }
+
+    nav#mobile-nav {
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgb(255, 255, 255);
+      z-index: 990;
+      padding: 130px 60px 30px 60px;
+
+      ul {
+        li {
+          margin-bottom: 40px;
+
+          a {
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      p {
+        margin-top: 40px;
+        font-size: 12px;
+        margin-bottom: 20px;
+
+        a {
+          font-size: inherit;
+          text-decoration: none;
+        }
+      }
+
+      small {
+        font-size: 10px;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+body.open {
+  nav#mobile-nav {
+    visibility: visible !important;
+  }
+
+  svg.nav-icon-close {
+    display: none !important;
+  }
+  svg.nav-icon-open {
+    display: block !important;
+  }
+}
+
+//  NAVIGATION END
+
 // CONTACT
 
 section.contact {

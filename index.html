@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="jp">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Lifact</title>
-  </head>
-  <body>
-    <div class="navigation">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Lifact</title>
+</head>
+
+<body>
+  <div class="navigation ">
+    <div class="flex align-center justify-between">
       <div class="logo">
-        <span class="logo__icon">Lifact</span>
-        <span class="logo__description">関西の土木建築工事｜株式会社Lifact</span>
+        <span class="logo__icon overpass">Lifact</span>
+        <span class="logo__description desktop-only ">関西の土木建築工事｜株式会社Lifact</span>
       </div>
-      <nav class="desktop-nav">
-        <ul>
+
+
+      <nav class="desktop-nav desktop-only ">
+        <ul class="flex">
           <li>
             <a href="#">私たちについて</a>
           </li>
@@ -29,9 +34,17 @@
           </li>
         </ul>
       </nav>
-      <div class="mobile-nav">
-        <div></div>
-        <nav>
+      <div class="mobile-nav mobile-only">
+        <div class="nav-icon" onclick="triggerMenu()">
+          <svg class="nav-icon-close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+          </svg>
+
+          <svg class="nav-icon-open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+          </svg>
+        </div>
+        <nav id="mobile-nav">
           <ul>
             <li>
               <a href="#">私たちについて</a>
@@ -49,252 +62,212 @@
 
           <p>
             <a href="#">プライバシーポリシー </a>
-            <small>&copy; 2022 Lifact 関西の土木建築工事｜株式会社Lifact</small>
           </p>
+          <small>&copy; 2022 Lifact 関西の土木建築工事</small>
+
         </nav>
       </div>
     </div>
+  </div>
 
-    <main>
-      <section class="hero-container">
-        <div class="hero__image-wrapper">
-          <img src="./images/hero-image.png" alt="Civil Engineering" />
-        </div>
+  <main>
+    <section class="hero-container">
+      <div class="hero__image-wrapper">
+        <img src="./images/hero-image.png" alt="Civil Engineering" />
+      </div>
 
-        <div class="hero__title flex column justify-center">
-          <p class="font-bold">人と地域の、未来を切り開く。</p>
-          <h1 class="overpass">Open Up The Future</h1>
-          <p class="tagline richland">for People and Regions.</p>
-        </div>
+      <div class="hero__title flex column justify-center">
+        <p class="font-bold">人と地域の、未来を切り開く。</p>
+        <h1 class="overpass">Open Up The Future</h1>
+        <p class="tagline richland">for People and Regions.</p>
+      </div>
+    </section>
 
-        <!-- <div class="hero__background-image">
-          <img src="./images/hero-image-2.png" alt="">
-        </div> -->
-      </section>
-
-      <section class="about flex no-wrap">
-        <div class="about__image-container col-6">
-          <div>
-            <img src="./images/about-image.png" alt="Civil Engineering" />
-            <p class="richland">About.</p>
-          </div>
-        </div>
-        <div class="about__content col-6">
-          <div class="section__heading">
-            <span class="section__heading-title">About</span>
-            <span class="section__heading-sub-title">私たちについて</span>
-          </div>
-          <div class="section__sub-heading">
-            <div>世代を超えて、技術を紡ぎ、</div>
-            <div>
-              人と地域の未来を<br class="desktop-only" />つくる会社になる。
-            </div>
-          </div>
-          <div class="section__description">
-            Lifactは、「人と地域の未来をつくる会社」をミッションに掲げる総合建設会社です。<br />
-            土木・建築工事をはじめとする幅広い事業を展開し、より良い暮らしの創造に貢献しています。<br />
-            次の世代に誇れる仕事を。<br />
-            Lifactはひとつひとつの仕事に熱意を注ぎ、次の世代につながる未来をつくります。
-          </div>
-
-          <div class="button">
-            <button>私たちについて</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="refract-works flex">
+    <section class="about flex no-wrap">
+      <div class="about__image-container col-6">
         <div>
-          <div class="subsection__heading">リファクトの働き方</div>
-
-          <div class="card-list card-list-orange flex justify-center">
-            <div class="card flex column">
-              <div class="card__header flex column">
-                <div class="card__header-number">1</div>
-                <div class="card__header-title">プロフェッショナルである</div>
-              </div>
-              <div class="card__description">
-                社員一人ひとりがプロフェッショナルであることに自覚をもち、責任と情熱を持って最後までやり遂げます。
-              </div>
-            </div>
-
-            <div class="card flex column">
-              <div class="card__header flex column">
-                <div class="card__header-number">2</div>
-                <div class="card__header-title">世代を超える</div>
-              </div>
-              <div class="card__description">
-                今までの経験や技術は惜しみなく次の世代に繋げます。長期的に発展し続ける、風通しの良い環境をつくります。
-              </div>
-            </div>
-
-            <div class="card flex column">
-              <div class="card__header flex column">
-                <div class="card__header-number">3</div>
-                <div class="card__header-title">地域と人に向き合う</div>
-              </div>
-              <div class="card__description">
-                地域や人の未来をつくる責任と誇りを忘れずに、真摯に耳を傾け、常に必要とされる存在であり続けます。
-              </div>
-            </div>
-          </div>
-
-          <div class="button flex justify-center">
-            <button>働く環境について</button>
+          <img src="./images/about-image.png" alt="Civil Engineering" />
+          <p class="richland">About.</p>
+        </div>
+      </div>
+      <div class="about__content col-6">
+        <div class="section__heading">
+          <span class="section__heading-title">About</span>
+          <span class="section__heading-sub-title">私たちについて</span>
+        </div>
+        <div class="section__sub-heading">
+          <div>世代を超えて、技術を紡ぎ、</div>
+          <div>
+            人と地域の未来を<br class="desktop-only" />つくる会社になる。
           </div>
         </div>
-      </section>
-
-      <section class="service">
-        <div class="service__header">
-          <img src="./images/service-image.png" alt="Hands in Graph" />
+        <div class="section__description">
+          Lifactは、「人と地域の未来をつくる会社」をミッションに掲げる総合建設会社です。<br />
+          土木・建築工事をはじめとする幅広い事業を展開し、より良い暮らしの創造に貢献しています。<br />
+          次の世代に誇れる仕事を。<br />
+          Lifactはひとつひとつの仕事に熱意を注ぎ、次の世代につながる未来をつくります。
         </div>
 
-        <div class="flex column align-center mx-auto">
-          <div class="section__heading" style="align-self: flex-start">
-            <span class="section__heading-title">Service</span>
-            <span class="section__heading-sub-title">事業内容</span>
-          </div>
+        <div class="button">
+          <button>私たちについて</button>
+        </div>
+      </div>
+    </section>
 
-          <div
-            class="service__description flex justify-between width-100"
-            style="margin-bottom: 100px"
-          >
-            <div class="col-6 col-sm-12" style="margin-bottom: 20px">
-              <h2>
-                世代を超えたチームで動き、<br />
-                建築業界の基盤を支える。
-              </h2>
+    <section class="refract-works flex">
+      <div class="mx-auto">
+        <div class="subsection__heading">リファクトの働き方</div>
+
+        <div class="card-list card-list-orange flex justify-center">
+          <div class="card flex column">
+            <div class="card__header flex column">
+              <div class="card__header-number">1</div>
+              <div class="card__header-title">プロフェッショナルである</div>
             </div>
-            <div class="col-6 col-sm-12">
-              <p>
-                Lifactの強みはチームで育つ、個々の技術と熱意の高さ。<br />
-                チームの連携により質の高い、効率的な作業が得意です。<br />
-                建設業界の基盤を支える、幅広い事業を展開しています。
-              </p>
+            <div class="card__description">
+              社員一人ひとりがプロフェッショナルであることに自覚をもち、責任と情熱を持って最後までやり遂げます。
             </div>
           </div>
 
-          <div class="card-list card-list-orange flex column width-100">
-            <div class="card flex column">
-              <div class="card__header flex column">
-                <div class="subsection__heading flex justify-between">
-                  土木・建築工事
+          <div class="card flex column">
+            <div class="card__header flex column">
+              <div class="card__header-number">2</div>
+              <div class="card__header-title">世代を超える</div>
+            </div>
+            <div class="card__description">
+              今までの経験や技術は惜しみなく次の世代に繋げます。長期的に発展し続ける、風通しの良い環境をつくります。
+            </div>
+          </div>
 
-                  <img
-                    class="arrow-hover"
-                    src="./images/arrow.svg"
-                    alt="arrow"
-                  />
+          <div class="card flex column">
+            <div class="card__header flex column">
+              <div class="card__header-number">3</div>
+              <div class="card__header-title">地域と人に向き合う</div>
+            </div>
+            <div class="card__description">
+              地域や人の未来をつくる責任と誇りを忘れずに、真摯に耳を傾け、常に必要とされる存在であり続けます。
+            </div>
+          </div>
+        </div>
+
+        <div class="button flex justify-center">
+          <button>働く環境について</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="service__header">
+        <img src="./images/service-image.png" alt="Hands in Graph" />
+      </div>
+
+      <div class="flex column align-center mx-auto">
+        <div class="section__heading" style="align-self: flex-start">
+          <span class="section__heading-title">Service</span>
+          <span class="section__heading-sub-title">事業内容</span>
+        </div>
+
+        <div class="service__description flex justify-between width-100" style="margin-bottom: 100px">
+          <div class="col-6 col-sm-12" style="margin-bottom: 20px">
+            <h2>
+              世代を超えたチームで動き、<br />
+              建築業界の基盤を支える。
+            </h2>
+          </div>
+          <div class="col-6 col-sm-12">
+            <p>
+              Lifactの強みはチームで育つ、個々の技術と熱意の高さ。<br />
+              チームの連携により質の高い、効率的な作業が得意です。<br />
+              建設業界の基盤を支える、幅広い事業を展開しています。
+            </p>
+          </div>
+        </div>
+
+        <div class="card-list card-list-orange flex column width-100">
+          <div class="card flex column">
+            <div class="card__header flex column">
+              <div class="subsection__heading flex justify-between">
+                土木・建築工事
+
+                <img class="arrow-hover" src="./images/arrow.svg" alt="arrow" />
+              </div>
+              <div class="card-content flex justify-between">
+                <div>
+                  <img src="./images/service-card-1.png" alt="Engineers Working" style="border-radius: 5px" />
                 </div>
-                <div class="card-content flex justify-between">
-                  <div>
-                    <img
-                      src="./images/service-card-1.png"
-                      alt="Engineers Working"
-                      style="border-radius: 5px"
-                    />
-                  </div>
 
-                  <div
-                    class="flex column justify-between"
-                    style="max-width: 480px; margin-top: -14px"
-                  >
-                    <h2>
-                      部署や職種をこえた連携で、<br />
-                      土木から建築まで幅広く現場を支えます。
-                    </h2>
+                <div class="flex column justify-between" style="max-width: 480px; margin-top: -14px">
+                  <h2>
+                    部署や職種をこえた連携で、<br />
+                    土木から建築まで幅広く現場を支えます。
+                  </h2>
 
-                    <p>
-                      舗装や道路、トンネルなどの土木工事から、建築工事まで対応しています。地域の環境保全に配慮し、人々がより快適に暮らせる場を創造していきます。
-                    </p>
-                  </div>
+                  <p>
+                    舗装や道路、トンネルなどの土木工事から、建築工事まで対応しています。地域の環境保全に配慮し、人々がより快適に暮らせる場を創造していきます。
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="card flex column">
-              <div class="card__header flex column">
-                <div class="subsection__heading flex justify-between">
-                  土木・建築工事
-                  <img
-                    class="arrow-hover"
-                    src="./images/arrow.svg"
-                    alt="arrow"
-                  />
+          <div class="card flex column">
+            <div class="card__header flex column">
+              <div class="subsection__heading flex justify-between">
+                土木・建築工事
+                <img class="arrow-hover" src="./images/arrow.svg" alt="arrow" />
+              </div>
+              <div class="card-content flex justify-between">
+                <div>
+                  <img src="./images/service-card-2.png" alt="Engineers Working" style="border-radius: 5px" />
                 </div>
-                <div class="card-content flex justify-between">
-                  <div>
-                    <img
-                      src="./images/service-card-2.png"
-                      alt="Engineers Working"
-                      style="border-radius: 5px"
-                    />
-                  </div>
 
-                  <div
-                    class="flex column justify-between"
-                    style="max-width: 480px; margin-top: -14px"
-                  >
-                    <h2>
-                      建物自体の解体、残置物の撤去から整地まで<br />
-                      徹底した管理体制を実現します。
-                    </h2>
+                <div class="flex column justify-between" style="max-width: 480px; margin-top: -14px">
+                  <h2>
+                    建物自体の解体、残置物の撤去から整地まで<br />
+                    徹底した管理体制を実現します。
+                  </h2>
 
-                    <p>
-                      家屋やマンション、アパートの解体工事はお任せください。
-                      地域の方への配慮や安全の確保など、徹底した管理体制で工事を進めていきます。
-                    </p>
-                  </div>
+                  <p>
+                    家屋やマンション、アパートの解体工事はお任せください。
+                    地域の方への配慮や安全の確保など、徹底した管理体制で工事を進めていきます。
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="card flex column">
-              <div class="card__header flex column">
-                <div class="subsection__heading flex justify-between">
-                  土木・建築工事
+          <div class="card flex column">
+            <div class="card__header flex column">
+              <div class="subsection__heading flex justify-between">
+                土木・建築工事
 
-                  <img
-                    class="arrow-hover"
-                    src="./images/arrow.svg"
-                    alt="arrow"
-                  />
+                <img class="arrow-hover" src="./images/arrow.svg" alt="arrow" />
+              </div>
+              <div class="card-content flex justify-between">
+                <div>
+                  <img src="./images/service-card-3.png" alt="Engineers Working" style="border-radius: 5px" />
                 </div>
-                <div class="card-content flex justify-between">
-                  <div>
-                    <img
-                      src="./images/service-card-3.png"
-                      alt="Engineers Working"
-                      style="border-radius: 5px"
-                    />
-                  </div>
 
-                  <div
-                    class="flex column justify-between"
-                    style="max-width: 480px; margin-top: -14px"
-                  >
-                    <h2>
-                      幅広い現場知識を持ったプロフェッショナルが<br />
-                      プロジェクト成功に貢献します。
-                    </h2>
+                <div class="flex column justify-between" style="max-width: 480px; margin-top: -14px">
+                  <h2>
+                    幅広い現場知識を持ったプロフェッショナルが<br />
+                    プロジェクト成功に貢献します。
+                  </h2>
 
-                    <p>
-                      建設工事には高度な技術やノウハウを必要とするため、優秀な人材が不足していることが問題になっています。Lifactではプロの人材が施工パートナーとして、共にプロジェクトを進行していきます。
-                    </p>
-                  </div>
+                  <p>
+                    建設工事には高度な技術やノウハウを必要とするため、優秀な人材が不足していることが問題になっています。Lifactではプロの人材が施工パートナーとして、共にプロジェクトを進行していきます。
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="works mx-auto">
-        <div
-          class="section__heading"
-          style="align-self: flex-start; margin-bottom: 80px"
-        >
+    <section class="works">
+      <div class="mx-auto">
+        <div class="section__heading" style="align-self: flex-start; margin-bottom: 80px">
           <span class="section__heading-title">Works</span>
           <span class="section__heading-sub-title">リファクトのしごと</span>
         </div>
@@ -339,74 +312,80 @@
         <div class="button flex justify-center">
           <button>働く環境について</button>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="contact flex">
-        <div
-          class="flex justify-between mt-auto width-100"
-          style="margin-bottom: 52px"
-        >
-          <div class="section__heading" style="align-self: flex-start">
-            <span class="section__heading-title">Contact</span>
-            <span class="section__heading-sub-title">お問い合わせ</span>
+    <section class="contact flex">
+      <div class="flex justify-between mt-auto width-100" style="margin-bottom: 52px">
+        <div class="section__heading" style="align-self: flex-start">
+          <span class="section__heading-title">Contact</span>
+          <span class="section__heading-sub-title">お問い合わせ</span>
+        </div>
+        <button>相談する</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer__banner flex">
+      <div class="company">
+        <div class="company__details flex align-center">
+          <span class="logo">Lifact</span>
+          <span class="tagline">関西の土木建築工事｜株式会社リファクト</span>
+        </div>
+
+        <div class="company__address">
+          <div>〒569-1044</div>
+          <div>大阪府高槻市上土室3丁目1番1号</span>
           </div>
-          <button>相談する</button>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer__banner flex">
-        <div class="company">
-          <div class="company__details flex align-center">
-            <span class="logo">Lifact</span>
-            <span class="tagline">関西の土木建築工事｜株式会社リファクト</span>
-          </div>
-  
-          <div class="company__address">
-            <div>〒569-1044</div>
-            <div>大阪府高槻市上土室3丁目1番1号</span>
-          </div>
-        </div>
-        </div>
-
-        <div class="about">
-          <ul>
-            <li class="list-heading">私たちについて</li>
-            <li>ステートメント</li>
-            <li>働く環境</li>
-            <li>メッセージ</li>
-            <li>会社概要</li>
-          </ul>
-        </div>
-
-        <div class="business-information">
-          <ul>
-            <li class="list-heading">事業紹介</li>
-            <li>土木・建築工事</li>
-            <li>解体工事</li>
-            <li>パートナー事業</li>
-            <li>施工の流れ</li>
-          </ul>
-        </div>
-
-        <div class="others">
-          <ul>
-            <li class="list-heading">リファクトのしごと</li>
-            <li class="list-heading">お問い合わせ</li>
-          </ul>
         </div>
       </div>
 
-      <div class="footer">
-        <span class="copyright">
-          &copy; 2022 株式会社Lifact
-        </span> 
-        
-        <span class="tagline">
-          プライバシーポリシー
-        </span>
+      <div class="about">
+        <ul>
+          <li class="list-heading">私たちについて</li>
+          <li>ステートメント</li>
+          <li>働く環境</li>
+          <li>メッセージ</li>
+          <li>会社概要</li>
+        </ul>
       </div>
-    </footer>
-  </body>
+
+      <div class="business-information">
+        <ul>
+          <li class="list-heading">事業紹介</li>
+          <li>土木・建築工事</li>
+          <li>解体工事</li>
+          <li>パートナー事業</li>
+          <li>施工の流れ</li>
+        </ul>
+      </div>
+
+      <div class="others">
+        <ul>
+          <li class="list-heading">リファクトのしごと</li>
+          <li class="list-heading">お問い合わせ</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="copyright">
+        &copy; 2022 株式会社Lifact
+      </span>
+
+      <span class="tagline">
+        プライバシーポリシー
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    function triggerMenu() {
+      let body = document.body;
+      body.classList.toggle("open");
+    }
+  </script>
+</body>
+
 </html>

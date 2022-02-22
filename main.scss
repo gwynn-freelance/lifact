@@ -49,13 +49,13 @@ ul {
   }
 }
 
-@media screen and (max-width: $breakpoint-sm) {
+@media screen and (max-width: 981px) {
   .desktop-only {
     display: none;
   }
 }
 
-@media screen and (min-width: $breakpoint-sm) {
+@media screen and (min-width: 981px) {
   .mobile-only {
     display: none;
   }
