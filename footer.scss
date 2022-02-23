@@ -226,6 +226,10 @@ footer {
     .business-information,
     .others {
       margin-bottom: 40px;
+      ul li {
+        cursor: pointer;
+      }
+
       ul li:not(.list-heading) {
         margin-left: 20px;
         font-size: 12px;
