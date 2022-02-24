@@ -58,6 +58,12 @@ section.about {
     & > div:first-child {
       padding-left: 30px;
     }
+
+    .statement-wrapper {
+      & > div:last-child {
+        padding-right: 30px;
+      }
+    }
   }
 }
 

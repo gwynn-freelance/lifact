@@ -329,7 +329,6 @@ section.refract-works {
 
 section.service {
   background-color: #faf6f5;
-  padding: 0 20px;
 
   .service__header {
     img {
@@ -341,6 +340,8 @@ section.service {
     max-width: 960px;
     padding-top: 120px;
     padding-bottom: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   div.card-list {
@@ -359,6 +360,7 @@ section.service {
     .card-list .card {
       padding: 40px !important;
       .card-content {
+        justify-content: center;
         img {
           width: 225px;
           margin-bottom: 20px;
